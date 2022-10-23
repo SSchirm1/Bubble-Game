@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-    public float horizontalMovement;
-    public float verticalMovement;
+    private float horizontalMovement;
+    private float verticalMovement;
 
     // A field editable from inside Unity with a default value of 5
-    public float speed = 5.0f;
+    public float speed = 20.0f;
+
     private Rigidbody rb;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
     }
 
     // Update is called once per frame
@@ -23,7 +24,8 @@ public class MovePlayer : MonoBehaviour
     {
         // This will detect forward and backward movement
         horizontalMovement = Input.GetAxisRaw("Horizontal");
-
+        
+       
         // This will detect sideways movement
         verticalMovement = Input.GetAxisRaw("Vertical");
 
