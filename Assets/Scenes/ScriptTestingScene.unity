@@ -130,10 +130,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4450646510929216101, guid: f21624709e023434dba968e826c29abb,
+        type: 3}
+      propertyPath: force
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450646510929216101, guid: f21624709e023434dba968e826c29abb,
+        type: 3}
+      propertyPath: ballMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d163aa16f2f36a4c81684c8e1b9706f, type: 2}
+    - target: {fileID: 4450646510929216101, guid: f21624709e023434dba968e826c29abb,
+        type: 3}
+      propertyPath: bubbleMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 483203ca1111c0242b79df7ff5051355, type: 2}
+    - target: {fileID: 4450646510929216101, guid: f21624709e023434dba968e826c29abb,
+        type: 3}
+      propertyPath: bubbleDrag
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450646510929216102, guid: f21624709e023434dba968e826c29abb,
+        type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4450646510929216105, guid: f21624709e023434dba968e826c29abb,
         type: 3}
       propertyPath: m_Drag
-      value: 40
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4450646510929216105, guid: f21624709e023434dba968e826c29abb,
         type: 3}
