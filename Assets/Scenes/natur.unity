@@ -22585,6 +22585,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallandCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 3527059744309194394, guid: 1da59cb5c1c54144494f1fdbb8d1e4b9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527059744309194394, guid: 1da59cb5c1c54144494f1fdbb8d1e4b9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527059744309194394, guid: 1da59cb5c1c54144494f1fdbb8d1e4b9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527059744309194394, guid: 1da59cb5c1c54144494f1fdbb8d1e4b9,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527059744309194395, guid: 1da59cb5c1c54144494f1fdbb8d1e4b9,
+        type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527059744309194399, guid: 1da59cb5c1c54144494f1fdbb8d1e4b9,
+        type: 3}
+      propertyPath: yOffset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527059744309194399, guid: 1da59cb5c1c54144494f1fdbb8d1e4b9,
+        type: 3}
+      propertyPath: zOffset
+      value: -6
+      objectReference: {fileID: 0}
     - target: {fileID: 5537810545692442962, guid: 1da59cb5c1c54144494f1fdbb8d1e4b9,
         type: 3}
       propertyPath: force

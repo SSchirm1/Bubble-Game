@@ -19,9 +19,11 @@ public class SimpleSampleCharacterControl : MonoBehaviour
     [SerializeField] private float m_turnSpeed = 200;
     [SerializeField] private float m_jumpForce = 4;
 
+    private Vector3 ballPos;
     [SerializeField] private Animator m_animator = null;
     [SerializeField] private Rigidbody m_rigidBody = null;
 
+   
     [SerializeField] private ControlMode m_controlMode = ControlMode.Direct;
 
     private float m_currentV = 0;
@@ -40,13 +42,17 @@ public class SimpleSampleCharacterControl : MonoBehaviour
     private bool m_jumpInput = false;
 
     private bool m_isGrounded;
-
+    private GameObject ball;
     private List<Collider> m_collisions = new List<Collider>();
 
     private void Awake()
     {
+        
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
+
+        ball = GameObject.Find("Sphere");
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -179,7 +185,11 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
         m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
 
-        Vector3 direction = camera.forward * m_currentV + camera.right * m_currentH;
+        ballPos = ball.transform.position; 
+        Quaternion lookDir = Quaternion.LookRotation(ballPos);
+        transform.rotation = lookDir;
+        Vector3 direction = transform.forward;
+        //Vector3 direction = camera.forward * m_currentV + camera.right * m_currentH;
 
         float directionLength = direction.magnitude;
         direction.y = 0;
@@ -188,8 +198,6 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         if (direction != Vector3.zero)
         {
             m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
-
-            transform.rotation = Quaternion.LookRotation(m_currentDirection);
             transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
 
             m_animator.SetFloat("MoveSpeed", direction.magnitude);
