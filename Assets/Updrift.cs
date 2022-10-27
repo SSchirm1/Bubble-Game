@@ -7,7 +7,7 @@ public class Updrift : MonoBehaviour
 
 
     private Rigidbody rb;
-    public float force = 100f;
+    public float force = 30f;
     public float timePassed = 0;
   
     // Start is called before the first frame update

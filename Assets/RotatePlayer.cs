@@ -5,7 +5,7 @@
  public class RotatePlayer : MonoBehaviour
  {
      public float Speed = 3.0F;
-     public float RotateSpeed = 0.2F;
+     public float RotateSpeed = 1F;
      void Update()
      {
          CharacterController controller = GetComponent<CharacterController>();
