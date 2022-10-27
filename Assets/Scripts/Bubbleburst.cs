@@ -13,6 +13,8 @@ public class Bubbleburst : MonoBehaviour
     Rigidbody rb;
     public float bubbleDrag = 30;
     public float ballDrag = 8;
+    public float ballWeight = 10;
+    public float bubbleWeight = 1;
     int state;
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,7 @@ public class Bubbleburst : MonoBehaviour
         rb.AddForce(0, 50f, 0);
         gb.GetComponent<MeshRenderer>().material = bubbleMat;
         state = 0;
+        rb.mass = bubbleWeight;
 
         rb.drag = bubbleDrag;
 
@@ -43,6 +46,7 @@ public class Bubbleburst : MonoBehaviour
         Debug.Log("crashed");
         rb.useGravity = true;
         gb.GetComponent<MeshRenderer>().material = ballMat;
+        rb.mass = ballWeight;
         state = 1;
         rb.drag = ballDrag;
 
