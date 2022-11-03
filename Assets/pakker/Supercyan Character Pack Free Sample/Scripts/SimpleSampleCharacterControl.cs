@@ -112,6 +112,7 @@ public class SimpleSampleCharacterControl : MonoBehaviour
 
     private void Update()
     {
+    
         if (!m_jumpInput && Input.GetKey(KeyCode.Space))
         {
             m_jumpInput = true;
@@ -121,6 +122,7 @@ public class SimpleSampleCharacterControl : MonoBehaviour
     private void FixedUpdate()
     {
         m_animator.SetBool("Grounded", m_isGrounded);
+
 
         switch (m_controlMode)
         {
@@ -185,12 +187,12 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
         m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
 
-        ballPos = ball.transform.position; 
+        ballPos = ball.transform.position;
         Quaternion lookDir = Quaternion.LookRotation(ballPos);
         transform.rotation = lookDir;
         Vector3 direction = transform.forward;
         //Vector3 direction = camera.forward * m_currentV + camera.right * m_currentH;
-
+       
         float directionLength = direction.magnitude;
         direction.y = 0;
         direction = direction.normalized * directionLength;

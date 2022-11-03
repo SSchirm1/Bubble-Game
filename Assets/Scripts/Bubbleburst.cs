@@ -28,7 +28,7 @@ public class Bubbleburst : MonoBehaviour
     {
        if(Input.GetButtonDown("Jump") && state == 1) {
         
-        rb.AddForce(0, 50f, 0);
+        rb.AddForce(0, force, 0);
         gb.GetComponent<MeshRenderer>().material = bubbleMat;
         state = 0;
         rb.mass = bubbleWeight;
@@ -43,7 +43,7 @@ public class Bubbleburst : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision) {
-        Debug.Log("crashed");
+      
         rb.useGravity = true;
         gb.GetComponent<MeshRenderer>().material = ballMat;
         rb.mass = ballWeight;
@@ -56,7 +56,7 @@ public class Bubbleburst : MonoBehaviour
 
 
       void applyForce() {
-        Debug.Log("force applied");
+       
         rb.AddForce(new Vector3(0,force,0), ForceMode.Force);
         timePassed += 0.02f;
         if (timePassed > 3) {

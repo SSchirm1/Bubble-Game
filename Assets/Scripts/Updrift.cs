@@ -6,8 +6,8 @@ public class Updrift : MonoBehaviour
 {
 
 
-    private Rigidbody rb;
-    public float force = 30f;
+    public Rigidbody rb;
+    public float force = 1000f;
     public float timePassed = 0;
   
     // Start is called before the first frame update
@@ -26,14 +26,16 @@ public class Updrift : MonoBehaviour
     }
 
      void OnTriggerEnter(Collider other) {
+    
         if (other.CompareTag("Player")) {
             Pushup(other);
+          
         }
     }
 
     void Pushup(Collider player) {
         rb = player.GetComponent<Rigidbody>();
-        Debug.Log("Entered zone");
+        
         InvokeRepeating("applyForce",0,0.02f);
        
        
