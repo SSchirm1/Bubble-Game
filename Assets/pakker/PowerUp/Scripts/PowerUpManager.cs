@@ -39,7 +39,7 @@ public class PowerUpManager : Singleton<PowerUpManager>
 		foreach(CustomizablePowerUp pu in powerUpsLogs) {
 			GUILayout.BeginHorizontal();
 			GUILayout.BeginVertical();
-			GUILayout.Label("You picked up <color=" + RGBToHex(pu.lightColor) + ">" + pu.powerUpName + "</color>");
+			// GUILayout.Label("You picked up <color=" + RGBToHex(pu.lightColor) + ">" + pu.powerUpName + "</color>");
 			GUILayout.EndVertical();
 			GUILayout.EndHorizontal();
 		}
