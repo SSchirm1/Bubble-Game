@@ -44,7 +44,7 @@ public class PowerUpManager : Singleton<PowerUpManager>
 			GUILayout.EndHorizontal();
 		}
 
-		GUI.Label(new Rect(Screen.width - 180, 0, 180, 20), "PowerUp count: <color=yellow>" + this.powerUps.Count + "</color>");
+		//GUI.Label(new Rect(Screen.width - 180, 0, 180, 20), "PowerUp count: <color=yellow>" + this.powerUps.Count + "</color>");
 	}
 }
 

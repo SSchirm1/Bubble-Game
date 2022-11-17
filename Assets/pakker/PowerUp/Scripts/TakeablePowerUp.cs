@@ -13,10 +13,10 @@ public class TakeablePowerUp : MonoBehaviour {
 
 	void OnTriggerEnter (Collider collider) {
 		if(collider.tag == "Player") {
+            ScoreScript.scoreValue += 1;
             rb = collider.GetComponent<Rigidbody>();
-			rb.AddForce(0, 5000f, 0);
-            lives += 1;
-            Debug.Log("Lives: " + lives);
+			//rb.AddForce(0, 5000f, 0);
+           
 
             PowerUpManager.Instance.Add(customPowerUp);
 			if(customPowerUp.pickUpSound != null){

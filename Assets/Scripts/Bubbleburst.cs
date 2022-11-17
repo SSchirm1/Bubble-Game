@@ -15,6 +15,7 @@ public class Bubbleburst : MonoBehaviour
     public float ballDrag = 8;
     public float ballWeight = 10;
     public float bubbleWeight = 1;
+    public float jumpforce = 100;
     int state;
     // Start is called before the first frame update
     void Start()
@@ -26,9 +27,15 @@ public class Bubbleburst : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetButtonDown("Jump") && state == 1) {
-        
-        rb.AddForce(0, force, 0);
+       if(Input.GetButtonDown("Jump") ) {
+            Debug.Log("jumped");
+            rb.AddForce(0, jumpforce, 0);
+       
+  
+       }
+
+       if (Input.GetKeyDown(KeyCode.Z)) {
+         rb.AddForce(0, force, 0);
         gb.GetComponent<MeshRenderer>().material = bubbleMat;
         state = 0;
         rb.mass = bubbleWeight;
@@ -37,8 +44,7 @@ public class Bubbleburst : MonoBehaviour
 
         timePassed = 0;
          InvokeRepeating("applyForce",0,0.02f);
-        
-        
+  
        }
     }
 
