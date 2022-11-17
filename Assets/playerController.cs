@@ -6,9 +6,11 @@ public class playerController : MonoBehaviour
 {
 
     public Rigidbody rb;
+    public GameObject gb;
 
     private float xInput;
     private float zInput;
+    public static float keydir = 1;
     public float speed = 25f;
     // Start is called before the first frame update
 
@@ -18,22 +20,24 @@ public class playerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        ProcessInputs();
-    }
+    
 
     void FixedUpdate() {
         //Movement
+       
+        ProcessInputs();
         Move();
     }
 
     private void ProcessInputs() {
-        xInput = Input.GetAxis("Horizontal");
-        zInput = Input.GetAxis("Vertical");
+        xInput = Input.GetAxis("Horizontal") * keydir;
+        zInput = Input.GetAxis("Vertical") * keydir;
     }
 
     private void Move() {
+
+   
         rb.AddForce(new Vector3(xInput*speed, 0f, zInput*speed));
+       
     }
 }

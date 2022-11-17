@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5566136232850934423}
   - component: {fileID: 5566136232850934416}
   - component: {fileID: 5566136232850934417}
+  - component: {fileID: 2057020566529160872}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -128,4 +129,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5566136232850934416}
+  gb: {fileID: 5566136232850934418}
   speed: 24.29
+--- !u!114 &2057020566529160872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566136232850934418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be36e9ccddbf79418b13deac5dbcfe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gb: {fileID: 5566136232850934418}
+  force: 30
+  ballMat: {fileID: 2100000, guid: e8a7db8bb30ba7846922a11cebbe1a2f, type: 2}
+  bubbleMat: {fileID: 2100000, guid: 483203ca1111c0242b79df7ff5051355, type: 2}
+  bubbleDrag: 5
+  ballDrag: 2
+  ballWeight: 1
+  bubbleWeight: 1
+  jumpforce: 500
