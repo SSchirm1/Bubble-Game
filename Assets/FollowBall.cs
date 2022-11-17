@@ -7,7 +7,8 @@ public class FollowBall : MonoBehaviour
 
     private Vector3 camPos;
     public Transform ball;
-    public float offset = 5;
+    public float offsetZ = 5;
+    public float offsetY = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class FollowBall : MonoBehaviour
     {
         Vector3 ballPos = ball.transform.position;
 
-        transform.position = ballPos + Vector3.back * offset;
+        transform.position = ballPos + Vector3.back * offsetZ + Vector3.up * offsetY;
         transform.LookAt(ballPos);
 
     }

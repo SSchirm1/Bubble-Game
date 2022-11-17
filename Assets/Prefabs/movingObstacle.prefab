@@ -111,5 +111,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gb: {fileID: 2461962038112507734}
-  scaleChange: {x: 0, y: 0.01, z: 0}
+  scaleChange: {x: 0, y: 0.005, z: 0}
   scaleMax: 2
