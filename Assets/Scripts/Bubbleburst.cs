@@ -34,8 +34,11 @@ public class Bubbleburst : MonoBehaviour
   
        }
 
-       if (Input.GetKeyDown(KeyCode.Z)) {
-         rb.AddForce(0, force, 0);
+       if (Input.GetKeyDown(KeyCode.Z) ) {
+        if (state == 0) {
+            rb.AddForce(0, force, 0);
+        }
+         
         gb.GetComponent<MeshRenderer>().material = bubbleMat;
         state = 0;
         rb.mass = bubbleWeight;

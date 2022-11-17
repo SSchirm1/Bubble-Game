@@ -550,6 +550,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallandCamera 1
       objectReference: {fileID: 0}
+    - target: {fileID: 564527718247738282, guid: 1da59cb5c1c54144494f1fdbb8d1e4b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3527059742626423776, guid: 1da59cb5c1c54144494f1fdbb8d1e4b9,
         type: 3}
       propertyPath: m_TagString
@@ -1069,6 +1074,95 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1001 &1273726884
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 911294083966281793, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.4399998
+      objectReference: {fileID: 0}
+    - target: {fileID: 911294083966281793, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.940001
+      objectReference: {fileID: 0}
+    - target: {fileID: 911294083966281799, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 911294084714112312, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: cameraDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288176687296356365, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_Name
+      value: newcam
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155353733714180657, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155353733714180657, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155353733714180657, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155353733714180657, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155353733714180657, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155353733714180657, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155353733714180657, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155353733714180657, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155353733714180657, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155353733714180657, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155353733714180657, guid: 63634f21651f3b44ea1ddca5cdeb7437,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63634f21651f3b44ea1ddca5cdeb7437, type: 3}
 --- !u!1 &1276304150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4654913014543565788, guid: 6ea24554e98c706489e850eb71b313b7,
