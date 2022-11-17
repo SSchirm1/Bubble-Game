@@ -10,14 +10,14 @@ public class movingCube : MonoBehaviour
     public float scaleMax;
     private float startScale;
     private bool growState = true;
-    public float startHeight = 3;
+    public float startHeight = 0;
     private float startYpos;
     // Start is called before the first frame update
     void Start()
     {
         Transform transform = gb.transform;
         float startScale = transform.localScale.y;
-        float startYpos = transform.position.y;
+        float startYpos = startScale / 2;
         Debug.Log(startYpos);
     }
 
