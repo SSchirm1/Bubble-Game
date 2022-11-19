@@ -25,6 +25,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+    SphereCollider collider;
 
     /** different bubble State;
     /* 0 = bubble
@@ -43,13 +44,16 @@ public class ThirdPersonMovement : MonoBehaviour
     {
       Cursor.visible = false;
       Cursor.lockState = CursorLockMode.Confined;
+        SphereCollider collider = playerObject.GetComponent<SphereCollider>();
 
     }
     // Update is called once per frame
     void Update()
     {
 
-      isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        //isGrounded =  Physics.CheckCapsule(collider.bounds.center,new Vector3(collider.bounds.center.x,collider.bounds.min.y-0.1f,collider.bounds.center.z),0.5f);
+        //isGrounded = Physics.Raycast(transform.position, -Vector3.up, playerObject.GetComponent<SphereCollider>().bounds.extents.y + 0.1f);
 
         if (isGrounded && velocity.y < 0)
         {
