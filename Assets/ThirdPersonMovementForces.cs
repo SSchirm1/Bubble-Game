@@ -17,12 +17,17 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
  [Header("Movement")]
     public float speed;
+    private float originalSpeed;
 
     public float groundDrag;
+    public float bubbleDrag;
 
     public float jumpForce;
     public float airMultiplier;
     bool readyToJump;
+
+    public float airUp;
+    public float airDown;
 
 
     [Header("Keybinds")]
@@ -43,35 +48,59 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
     bool canJump;
 
+    enum State {
+        ball,
+        soap,
+        bubble,
+    }
+
+    State state;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         
-        readyToJump = true;
-
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
+        originalSpeed = speed;
 
-        // temporary
-        playerObject.GetComponent<MeshRenderer>().material = ballMat;
+        state = State.ball;
+        becomeBall();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // check if collided with soap, change to soaped if
+        if(state == State.bubble) {
+            state = State.ball;
+            becomeBall();    
+        }
+
+        if (collision.gameObject.tag == "Soap" && state != State.soap) {
+            state = State.soap;
+        }
     }
 
     private void Update()
     {
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
-
+        
         MyInput();
         SpeedControl();
-
+        
         // handle drag
         if (grounded) {
-            rb.drag = groundDrag;
             canJump = true;
+            rb.drag = groundDrag;
+        } else if (state == State.bubble) {
+            rb.drag = bubbleDrag;
         } else {
             rb.drag = 0;
         }
+
+        
+
     }
 
     private void FixedUpdate()
@@ -85,11 +114,23 @@ public class ThirdPersonMovementForces : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         // when to jump
-        if(Input.GetKey(jumpKey) && canJump)
+        if(Input.GetKey(jumpKey) && canJump && state != State.bubble)
         {
-
             Jump();
+        }
 
+        if(Input.GetKey(jumpKey) && state == State.bubble) {
+            floatUp();
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift) && state == State.bubble) {
+            floatDown();
+        }
+
+        // turn to bubble
+        if(Input.GetKey(KeyCode.E) && state == State.soap) {
+            state = State.bubble;
+            becomeBubble();
         }
     }
 
@@ -129,6 +170,35 @@ public class ThirdPersonMovementForces : MonoBehaviour
         
         rb.AddForce(jump, ForceMode.Impulse);
         canJump = false;
+    }
+
+    private void becomeBall() {
+        if (state == State.ball) {
+            playerObject.GetComponent<MeshRenderer>().material = ballMat;
+            rb.useGravity = true;
+            speed = originalSpeed;
+        }
+
+    }
+
+    private void becomeBubble() {
+        if (state == State.bubble) {
+            playerObject.GetComponent<MeshRenderer>().material = bubbleMat;
+            rb.useGravity = false;
+            speed = speed / 2;
+        }
+    }
+
+    private void floatUp() {
+        Vector3 floatUp = new Vector3(0, airUp, 0);
+
+        rb.AddForce(floatUp, ForceMode.Impulse);
+    }
+
+    private void floatDown() {
+        Vector3 floatDown = new Vector3(0, -airDown, 0);
+
+        rb.AddForce(floatDown, ForceMode.Impulse);
     }
  
 }
