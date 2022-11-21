@@ -112,5 +112,16 @@ public class ThirdPersonMovement : MonoBehaviour
 
     }
 
+
+    void OnCollisionEnter(Collision collision) {
+      if (collision.gameObject.tag == "water") {
+        playerObject.GetComponent<MeshRenderer>().material = bubbleMat;
+        gravity = -0.3f;
+            speed = 3f;
+            state = State.bubble;
+            velocity.y = Mathf.Sqrt(5* jumpHeight * -1f * gravity);
+      }
+    }
+
 }
 
