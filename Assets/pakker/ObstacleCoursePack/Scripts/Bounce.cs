@@ -15,7 +15,7 @@ public class Bounce : MonoBehaviour
 			Debug.DrawRay(contact.point, contact.normal, Color.white);
 			if (collision.gameObject.tag == "Player")
 			{
-                Debug.Log("bounced");
+                //Debug.Log("bounced");
                 hitDir = contact.normal;
 				collision.gameObject.GetComponent<CharacterControls>().HitPlayer(-hitDir * force, stunTime);
 				return;
