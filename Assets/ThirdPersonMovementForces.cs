@@ -12,7 +12,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
     public Material ballMat;
     public Material bubbleMat;
 
-    public float turnSmoothTime = 0.2f;
+    public float turnSmoothTime = 0f;
     float turnSmoothVelocity;
 
  [Header("Movement")]
@@ -41,6 +41,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
     Rigidbody rb;
 
+    bool canJump;
 
 
     private void Start()
@@ -65,10 +66,12 @@ public class ThirdPersonMovementForces : MonoBehaviour
         SpeedControl();
 
         // handle drag
-        if (grounded)
+        if (grounded) {
             rb.drag = groundDrag;
-        else
+            canJump = true;
+        } else {
             rb.drag = 0;
+        }
     }
 
     private void FixedUpdate()
@@ -82,7 +85,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         // when to jump
-        if(Input.GetKey(jumpKey) && grounded)
+        if(Input.GetKey(jumpKey) && canJump)
         {
 
             Jump();
@@ -122,14 +125,10 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
     private void Jump()
     {
-        /*
-        // figure out up dircetion based on ground?
-        // reset y velocity
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-
-        */
+        Vector3 jump = new Vector3(0, jumpForce, 0);
+        
+        rb.AddForce(jump, ForceMode.Impulse);
+        canJump = false;
     }
  
 }
