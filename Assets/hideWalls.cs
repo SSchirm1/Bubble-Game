@@ -43,10 +43,9 @@ public class hideWalls : MonoBehaviour
                  Color tempColor = r.material.color;
                  tempColor.a = 0.3F;
                  
-                  time += Time.deltaTime;
-                while (time < 2) {
+               
                  r.material.color = tempColor;   
-                }
+                
             }
             
 
