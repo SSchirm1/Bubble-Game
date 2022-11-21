@@ -32,15 +32,21 @@ public class hideWalls : MonoBehaviour
             //Debug.Log(hit.collider.gameObject.name);
             r = hit.collider.GetComponent<Renderer>();
             originalColor = r.sharedMaterial.color;
+            float time = 0;
             if (r)
             {
+               
                 //Debug.Log("Hit object" + hit.collider.gameObject.name);
                 // Change the material of all hit colliders
                 // to use a transparent shader.
                 r.material.shader = Shader.Find("Transparent/Diffuse");
                  Color tempColor = r.material.color;
                  tempColor.a = 0.3F;
-                 r.material.color = tempColor;
+                 
+                  time += Time.deltaTime;
+                while (time < 2) {
+                 r.material.color = tempColor;   
+                }
             }
             
 

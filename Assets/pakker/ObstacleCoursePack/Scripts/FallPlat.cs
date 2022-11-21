@@ -14,9 +14,18 @@ public class FallPlat : MonoBehaviour
 			//Debug.DrawRay(contact.point, contact.normal, Color.white);
 			if (collision.gameObject.tag == "Player")
 			{
-				StartCoroutine(Fall(fallTime));
+                fallPlatform();
+                StartCoroutine(Fall(fallTime));
 			}
 		}
+	}
+
+	void Update() {
+        
+    }
+
+	void fallPlatform() {
+		transform.position -= new Vector3(0,0.04f,0);
 	}
 
 	IEnumerator Fall(float time)
