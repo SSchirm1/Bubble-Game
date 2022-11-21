@@ -5,7 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+<<<<<<< HEAD
   - water
+=======
+  - Wall
+  - Soap
+>>>>>>> fixCamera
   layers:
   - Default
   - TransparentFX
