@@ -82,9 +82,9 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 0.20188677, b: 0.20188677, a: 1}
-    - _ColorShiftBand: {r: 0.3, g: 0.2, b: 0.3, a: 1}
+    - _ColorShiftBand: {r: 0.3, g: 0.20000002, b: 0.30000007, a: 0}
     - _ColorShiftNoise: {r: 0.1, g: 1, b: 1, a: 0}
-    - _ColorShiftPeak: {r: 0.3, g: 0.5, b: 0.8, a: 1}
+    - _ColorShiftPeak: {r: 0.3, g: 0.5, b: 0.8, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 0.2}
   m_BuildTextureStacks: []
