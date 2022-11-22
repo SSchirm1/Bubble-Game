@@ -51,7 +51,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
     Rigidbody rb;
 
     bool canJump;
-
+    public float bubbleForce = .3f;
     enum State {
         ball,
         soap,
@@ -127,6 +127,11 @@ public class ThirdPersonMovementForces : MonoBehaviour
         if (floatDownCharge)
             FloatDown();
             floatDownCharge = false;
+
+
+        if (state == State.bubble) {
+             rb.AddForce(new Vector3(0, -1.0f, 0)*rb.mass*bubbleForce);  
+        }
     }
 
     private void MyInput()
