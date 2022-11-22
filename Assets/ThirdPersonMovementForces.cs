@@ -26,6 +26,9 @@ public class ThirdPersonMovementForces : MonoBehaviour
     public float airMultiplier;
     bool readyToJump;
 
+    public Vector3 checkpoint;
+    AudioSource audio_data;
+
     public float airUp;
     public float airDown;
 

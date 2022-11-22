@@ -29,12 +29,12 @@ public class hideWalls : MonoBehaviour
         
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.gameObject.name);
+            //Debug.Log(hit.collider.gameObject.name);
             r = hit.collider.GetComponent<Renderer>();
             originalColor = r.sharedMaterial.color;
             if (r)
             {
-                Debug.Log("Hit object" + hit.collider.gameObject.name);
+                //Debug.Log("Hit object" + hit.collider.gameObject.name);
                 // Change the material of all hit colliders
                 // to use a transparent shader.
                 r.material.shader = Shader.Find("Transparent/Diffuse");
@@ -47,8 +47,8 @@ public class hideWalls : MonoBehaviour
 
         }
         else {
-                Debug.Log("Showing object");
-                hit.collider.gameObject.GetComponent<Material>().color = originalColor;
+                //Debug.Log("Showing object");
+                //hit.collider.gameObject.GetComponent<Material>().color = originalColor;
             }
 
     }
