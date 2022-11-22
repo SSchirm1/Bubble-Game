@@ -42,8 +42,6 @@ public class ObjectInTheWay : MonoBehaviour
         
         foreach (var hit in hits1_Forward)
         {
-            // kanskje endre til layer type sjekk eller lignende
-            Debug.Log(hit.collider.gameObject.name);
             GameObject gameObject = hit.collider.gameObject;
             
             if (!currentlyInTheWay.Contains(gameObject)) 
