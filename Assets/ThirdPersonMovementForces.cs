@@ -56,6 +56,11 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
     State state;
 
+    private bool jumpCharge;
+    private bool floatUpCharge;
+    private bool floatDownCharge;
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -106,6 +111,18 @@ public class ThirdPersonMovementForces : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+        
+        if (jumpCharge)
+            Jump();
+            jumpCharge = false;
+        
+        if (floatUpCharge)
+            FloatUp();
+            floatUpCharge = false;
+
+        if (floatDownCharge)
+            FloatDown();
+            floatDownCharge = false;
     }
 
     private void MyInput()
@@ -116,15 +133,15 @@ public class ThirdPersonMovementForces : MonoBehaviour
         // when to jump
         if(Input.GetKey(jumpKey) && canJump && state != State.bubble)
         {
-            Jump();
+            jumpCharge = true;
         }
 
         if(Input.GetKey(jumpKey) && state == State.bubble) {
-            floatUp();
+            floatUpCharge = true;
         }
 
         if(Input.GetKey(KeyCode.LeftShift) && state == State.bubble) {
-            floatDown();
+            floatDownCharge = true;
         }
 
         // turn to bubble
@@ -189,16 +206,16 @@ public class ThirdPersonMovementForces : MonoBehaviour
         }
     }
 
-    private void floatUp() {
-        Vector3 floatUp = new Vector3(0, airUp, 0);
+    private void FloatUp() {
+        Vector3 FloatUp = new Vector3(0, airUp, 0);
 
-        rb.AddForce(floatUp, ForceMode.Impulse);
+        rb.AddForce(FloatUp, ForceMode.Impulse);
     }
 
-    private void floatDown() {
-        Vector3 floatDown = new Vector3(0, -airDown, 0);
+    private void FloatDown() {
+        Vector3 FloatDown = new Vector3(0, -airDown, 0);
 
-        rb.AddForce(floatDown, ForceMode.Impulse);
+        rb.AddForce(FloatDown, ForceMode.Impulse);
     }
  
 }
