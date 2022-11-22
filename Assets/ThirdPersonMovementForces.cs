@@ -12,6 +12,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
     public Material ballMat;
     public Material bubbleMat;
 
+
     public float turnSmoothTime = 0f;
     float turnSmoothVelocity;
 
@@ -25,6 +26,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
     public float jumpForce;
     public float airMultiplier;
     bool readyToJump;
+    AudioSource audio_data;
 
     public float airUp;
     public float airDown;
@@ -66,6 +68,8 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
         state = State.ball;
         becomeBall();
+
+        audio_data = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -167,10 +171,12 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
     private void Jump()
     {
+        audio_data.Play();
         Vector3 jump = new Vector3(0, jumpForce, 0);
         
         rb.AddForce(jump, ForceMode.Impulse);
         canJump = false;
+        
     }
 
     private void becomeBall() {

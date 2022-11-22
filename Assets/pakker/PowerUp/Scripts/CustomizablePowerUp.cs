@@ -7,8 +7,9 @@ public class CustomizablePowerUp : MonoBehaviour {
 	public string powerUpName;
 	public bool isTakeable = false;
 	public AudioClip pickUpSound;
+    public static float volume;
 
-	public GameObject externHull;
+    public GameObject externHull;
 	private GameObject _externHull;
 	public float externHullRotSpeed = 0f;
 	public bool externHullIsReverse = false;
