@@ -10,15 +10,19 @@ public class Bounce : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
 	{
-		foreach (ContactPoint contact in collision.contacts)
+        Debug.Log("collided");
+
+        foreach (ContactPoint contact in collision.contacts)
 		{
 			Debug.DrawRay(contact.point, contact.normal, Color.white);
 			if (collision.gameObject.tag == "Player")
 			{
                 //Debug.Log("bounced");
                 hitDir = contact.normal;
-				//collision.gameObject.GetComponent<ThirdPersonMovementForces>().HitPlayer(-hitDir * force, stunTime);
-				return;
+                Debug.Log("player hit");
+                collision.gameObject.GetComponentInChildren<Rigidbody>().AddForce(-hitDir * force);
+                //collision.gameObject.GetComponent<ThirdPersonMovementForces>().HitPlayer(-hitDir * force, stunTime);
+                return;
 			}
 		}
 		/*if (collision.relativeVelocity.magnitude > 2)

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6223617057227795079}
   - component: {fileID: 6223617057227795076}
   m_Layer: 0
-  m_Name: medium
+  m_Name: mediumbounce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
