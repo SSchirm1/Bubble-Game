@@ -5,7 +5,7 @@ using UnityEngine;
 public class elevate : MonoBehaviour
 {
 
-    public float speed;
+    public float speed = 2;
     public bool movingUp = true;
 
     public float height = 10;
@@ -22,23 +22,45 @@ public class elevate : MonoBehaviour
         
     }
 
+    float time = 0;
+
     void FixedUpdate() {
 
+        if (transform.position.y <= startPos.y + .2) {
+            time += Time.deltaTime;
+            if(time > 2) {
+                 movingUp = true;
+            }
+           
+        }
+
         if (movingUp) {
-                transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(0, height, 0), speed * Time.deltaTime);
-            if(transform.position.y == startPos.y + height) {
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(0, height, 0), speed * Time.deltaTime);
+            if(transform.position.y >= startPos.y + height) {
                 movingUp = false;
             }
+            time = 0;
         }
+        else  {
+            transform.position = Vector3.MoveTowards(transform.position, startPos, speed * Time.deltaTime);
+        }
+      
+       
+    }
+
+    IEnumerator ExampleCoroutine() {
+        yield return new WaitForSeconds(1);
     }
 
     
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Player") {
-            moveUp();
+    /*private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.tag == "Player" && !movingUp) {
+            Debug.Log("elevate");
+            movingUp = true;
         }
-    }
+
+    }*/
 
     void moveUp() {
         

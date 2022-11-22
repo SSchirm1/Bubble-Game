@@ -569,6 +569,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 6622379645102061406, guid: 90c8d0a46d764ef43a210e230882d41b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6622379645139357486, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -617,7 +622,7 @@ PrefabInstance:
     - target: {fileID: 6622379645339449819, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: upDrift
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6622379645355453531, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
@@ -2264,10 +2269,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542618680}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5731547941117289742, guid: 83447af96b32743f88a4686241f50660, type: 3}
 --- !u!114 &542618688
@@ -2283,8 +2288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  isAtBottom: 1
-  height: 16
+  movingUp: 0
+  height: 15.5
   startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &557885092 stripped
 GameObject:
@@ -5206,10 +5211,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820616898}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &1828223569 stripped
