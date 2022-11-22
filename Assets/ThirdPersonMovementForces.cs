@@ -44,6 +44,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
     float horizontalInput;
     float verticalInput;
+    public float upDrift = 3;
 
     Vector3 moveDirection;
 
@@ -206,6 +207,8 @@ public class ThirdPersonMovementForces : MonoBehaviour
             playerObject.GetComponent<MeshRenderer>().material = bubbleMat;
             rb.useGravity = false;
             speed = speed / 2;
+            rb.AddForce(Vector3.up * upDrift, ForceMode.Impulse);
+
         }
     }
 
