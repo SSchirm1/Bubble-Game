@@ -6,6 +6,14 @@ using UnityEngine;
 
 public class HealthBarHUDTester : MonoBehaviour
 {
+
+
+    void OnTriggerEnter(Collider collider) {
+        if (collider.gameObject.tag == "Player") {
+            Debug.Log("lost a life");
+            Hurt(1);
+        }
+    }
     public void AddHealth()
     {
         PlayerStats.Instance.AddHealth();
