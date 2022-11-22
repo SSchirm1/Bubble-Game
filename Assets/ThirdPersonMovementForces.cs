@@ -133,6 +133,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
             becomeBubble();
         }
     }
+    
 
     private void MovePlayer()
     {
@@ -201,4 +202,10 @@ public class ThirdPersonMovementForces : MonoBehaviour
         rb.AddForce(floatDown, ForceMode.Impulse);
     }
  
+
+
+
+ 
 }
+
+

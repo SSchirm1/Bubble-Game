@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hideWalls : MonoBehaviour
+public class hideWalls2 : MonoBehaviour
 {
 
     public GameObject player;

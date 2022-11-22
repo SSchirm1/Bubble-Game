@@ -17,7 +17,7 @@ public class Bounce : MonoBehaviour
 			{
                 //Debug.Log("bounced");
                 hitDir = contact.normal;
-				collision.gameObject.GetComponent<CharacterControls>().HitPlayer(-hitDir * force, stunTime);
+				//collision.gameObject.GetComponent<ThirdPersonMovementForces>().HitPlayer(-hitDir * force, stunTime);
 				return;
 			}
 		}
