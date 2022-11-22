@@ -1929,7 +1929,11 @@ PrefabInstance:
     - target: {fileID: 6479302632778621233, guid: 37362ea9595574e45bf9300a151a788d,
         type: 3}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
+      value: -0.000000028235004
+=======
       value: -0.000000050600953
+>>>>>>> fixCamera
       objectReference: {fileID: 0}
     - target: {fileID: 6479302633057685143, guid: 37362ea9595574e45bf9300a151a788d,
         type: 3}
