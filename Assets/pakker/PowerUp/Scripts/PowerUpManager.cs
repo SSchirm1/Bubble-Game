@@ -36,6 +36,7 @@ public class PowerUpManager : Singleton<PowerUpManager>
 	}
 
 	void OnGUI() {
+		/*
 		foreach(CustomizablePowerUp pu in powerUpsLogs) {
 			GUILayout.BeginHorizontal();
 			GUILayout.BeginVertical();
@@ -43,7 +44,7 @@ public class PowerUpManager : Singleton<PowerUpManager>
 			GUILayout.EndVertical();
 			GUILayout.EndHorizontal();
 		}
-
+	*/
 		//GUI.Label(new Rect(Screen.width - 180, 0, 180, 20), "PowerUp count: <color=yellow>" + this.powerUps.Count + "</color>");
 	}
 }
