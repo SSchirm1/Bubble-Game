@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: 5263193849274771171}
   - component: {fileID: 5263193849274771170}
   - component: {fileID: 5263193849274771169}
+  - component: {fileID: 127935284682117230}
+  - component: {fileID: 7581078122372046675}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -195,6 +197,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 25
   stunTime: 0.5
+--- !u!114 &127935284682117230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5263193849274771168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c5ebb205c8a98649ba617f5e54377cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0.5
+--- !u!135 &7581078122372046675
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5263193849274771168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5263193850122822931
 GameObject:
   m_ObjectHideFlags: 0
