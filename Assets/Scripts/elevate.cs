@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class elevate : MonoBehaviour
 {
-
+    public float delay = 0;
     public float speed = 2;
     public bool movingUp = true;
 
@@ -14,6 +14,12 @@ public class elevate : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
+        StartCoroutine(Delay());
+
+    }
+    
+    IEnumerator Delay(){
+       yield return new WaitForSeconds(delay);
     }
 
     // Update is called once per frame
