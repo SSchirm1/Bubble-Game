@@ -7,6 +7,17 @@ using UnityEngine;
 public class HealthBarHUDTester : MonoBehaviour
 {
 
+    GameObject player;
+    void Start() {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    void Update() {
+        if (player.transform.position.y < -100) {
+            Hurt(1);
+            player.transform.position = player.GetComponent<ThirdPersonMovementForces>().checkpoint;
+        }
+    }
 
     void OnTriggerEnter(Collider collider) {
         if (collider.gameObject.tag == "Player") {
