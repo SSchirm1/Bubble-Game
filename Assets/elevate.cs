@@ -48,21 +48,4 @@ public class elevate : MonoBehaviour
        
     }
 
-    IEnumerator ExampleCoroutine() {
-        yield return new WaitForSeconds(1);
-    }
-
-    
-
-    /*private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Player" && !movingUp) {
-            Debug.Log("elevate");
-            movingUp = true;
-        }
-
-    }*/
-
-    void moveUp() {
-        
-    }
 }
