@@ -12,6 +12,8 @@ public class ThirdPersonMovementForces : MonoBehaviour
     public Material ballMat;
     public Material bubbleMat;
 
+    private AudioSource soapAudio;
+
     public float turnSmoothTime = 0f;
     float turnSmoothVelocity;
 
@@ -19,7 +21,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
     public float speed;
     private float originalSpeed;
 
-    private AudioSource jumpAudio;
+   
 
     public float groundDrag;
     public float bubbleDrag;
@@ -67,6 +69,8 @@ public class ThirdPersonMovementForces : MonoBehaviour
     private bool floatDownCharge;
 
 
+    public AudioSource jumpAudio;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -76,6 +80,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
         originalSpeed = speed;
 
         jumpAudio = GetComponent<AudioSource>();
+       
 
         state = State.ball;
         becomeBall();
@@ -83,6 +88,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
         // check if collided with soap, change to soaped if
         if(state == State.bubble) {
             state = State.ball;
@@ -91,6 +97,8 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
         if (collision.gameObject.tag == "Soap" && state != State.soap) {
             state = State.soap;
+            
+
         }
     }
 
@@ -106,6 +114,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
         if (grounded) {
             canJump = true;
             rb.drag = groundDrag;
+            
         } else if (state == State.bubble) {
             rb.drag = bubbleDrag;
         } else {
@@ -202,6 +211,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
         rb.AddForce(jump, ForceMode.Impulse);
         canJump = false;
+        
     }
 
     private void becomeBall() {
