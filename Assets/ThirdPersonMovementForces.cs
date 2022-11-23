@@ -19,6 +19,8 @@ public class ThirdPersonMovementForces : MonoBehaviour
     public float speed;
     private float originalSpeed;
 
+    private AudioSource jumpAudio;
+
     public float groundDrag;
     public float bubbleDrag;
 
@@ -72,6 +74,8 @@ public class ThirdPersonMovementForces : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
         originalSpeed = speed;
+
+        jumpAudio = GetComponent<AudioSource>();
 
         state = State.ball;
         becomeBall();
@@ -193,7 +197,9 @@ public class ThirdPersonMovementForces : MonoBehaviour
     private void Jump()
     {
         Vector3 jump = new Vector3(0, jumpForce, 0);
-        
+
+        jumpAudio.Play();
+
         rb.AddForce(jump, ForceMode.Impulse);
         canJump = false;
     }
