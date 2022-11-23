@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 4203403901975354431}
   - component: {fileID: 4112983649164195357}
   - component: {fileID: 5492799825769222253}
+  - component: {fileID: -2714877743364092721}
   m_Layer: 9
   m_Name: sopevann
   m_TagString: Untagged
@@ -197,3 +198,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1568016432510859342, guid: c3bfe96a1530446548395ec75e6c931a, type: 3}
+--- !u!114 &-2714877743364092721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819775597709920074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46832eaf464f7ff44ae60104d70f4c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkPoint: {x: 0, y: 0, z: 0}
