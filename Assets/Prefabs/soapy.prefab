@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 1985086632431965167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -232.7, y: -8.71, z: 56.31}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3072889479120057497}
   m_Father: {fileID: 0}
@@ -48,7 +48,6 @@ MonoBehaviour:
   powerUpName: 
   isTakeable: 0
   pickUpSound: {fileID: 8300000, guid: a4a9327e98855524c846cc8e2f559e96, type: 3}
-  volume: 5.32
   externHull: {fileID: 0}
   externHullRotSpeed: 0
   externHullIsReverse: 0
@@ -274,6 +273,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 1
+--- !u!114 &319523091362393904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092916681295703378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e5f35d37d1b9c44b053a4e337568a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3072889479120057497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3542478533693314694, guid: 08c792520b3e6754eb93ca3159681bb2,
