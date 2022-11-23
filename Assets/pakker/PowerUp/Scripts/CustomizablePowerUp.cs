@@ -36,6 +36,8 @@ public class CustomizablePowerUp : MonoBehaviour {
 	public Color lightColor = Color.white;
 	public float lightIntensity = 3.0f;
 	public float lightRange = 4.0f;
+
+	
 	#endregion
 	
 	void Start () {
