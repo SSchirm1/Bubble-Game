@@ -11,7 +11,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
     public GameObject playerObject;
     public Material ballMat;
     public Material bubbleMat;
-
+   
     public float turnSmoothTime = 0f;
     float turnSmoothVelocity;
 
@@ -40,6 +40,8 @@ public class ThirdPersonMovementForces : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     bool grounded;
+
+    public AudioSource audio;
 
 
     float horizontalInput;
@@ -75,6 +77,8 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
         state = State.ball;
         becomeBall();
+
+       
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -203,6 +207,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
             playerObject.GetComponent<MeshRenderer>().material = ballMat;
             rb.useGravity = true;
             speed = originalSpeed;
+            audio.Play();
         }
 
     }

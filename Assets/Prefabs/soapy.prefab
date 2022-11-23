@@ -47,8 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpName: 
   isTakeable: 0
-  pickUpSound: {fileID: 8300000, guid: a4a9327e98855524c846cc8e2f559e96, type: 3}
-  volume: 5.32
+  pickUpSound: {fileID: 8300000, guid: e74697a25c5fa48e09fa88eb8a99f4b7, type: 3}
   externHull: {fileID: 0}
   externHullRotSpeed: 0
   externHullIsReverse: 0
