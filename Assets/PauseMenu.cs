@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
   public static bool GamePaused = false;
 
   public GameObject pauseMenuUI;
+  public GameObject respawnMenuUI;
 
 
     void Update()
@@ -18,15 +19,21 @@ public class PauseMenu : MonoBehaviour
             if (GamePaused)
             {
                 // fix cursor here so its visible in main menu
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Confined;
-
+                DeactivateCursor();
                 Resume();
             } else
             {
                 Pause();
             }
         }
+
+        /* code for respawn menu, needs life count to work
+        if (lives <= 0)
+        {
+            Respawn();
+        }
+        */
+
     }
 
     public void Resume()
@@ -38,13 +45,33 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Locked; // centers the cursor
-        Cursor.lockState = CursorLockMode.None;
+        ActivateCursor();
 
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GamePaused = true;
+    }
+
+    void Respawn()
+    {
+        ActivateCursor();
+        respawnMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GamePaused = true;
+
+    }
+
+    void ActivateCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked; // centers the cursor
+        Cursor.lockState = CursorLockMode.None;
+    }
+    
+    void DeactivateCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void LoadMenu()
@@ -53,9 +80,11 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(0);  // 0 is menu scene
     }
 
-    public void Respawn()
+    public void RespawnButton()
     {
         Resume();
         SceneManager.LoadScene(1);  // 1 is game scene
     }
+
+
 }
