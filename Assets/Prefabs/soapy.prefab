@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1985086632431965165}
   m_Layer: 0
   m_Name: soapy
-  m_TagString: Untagged
+  m_TagString: collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,6 +248,18 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &319523091362393904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092916681295703378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e5f35d37d1b9c44b053a4e337568a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1985086632836974762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,18 +285,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 1
---- !u!114 &319523091362393904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092916681295703378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8e5f35d37d1b9c44b053a4e337568a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &3072889479120057497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3542478533693314694, guid: 08c792520b3e6754eb93ca3159681bb2,
