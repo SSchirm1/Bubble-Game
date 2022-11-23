@@ -52,4 +52,10 @@ public class PauseMenu : MonoBehaviour
         Resume();
         SceneManager.LoadScene(0);  // 0 is menu scene
     }
+
+    public void Respawn()
+    {
+        Resume();
+        SceneManager.LoadScene(1);  // 1 is game scene
+    }
 }
