@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8911599286644165062}
   - component: {fileID: 4118716721033173466}
   - component: {fileID: 3224485182945998300}
-  - component: {fileID: 5492799824072769148}
-  m_Layer: 9
+  - component: {fileID: 663743328020792596}
+  m_Layer: 4
   m_Name: Plane.007
   m_TagString: Soap
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5492799824072769148
+--- !u!64 &663743328020792596
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,7 +162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3d19677a81ac6450b95b1dd48d9f8bf4, type: 2}
+  - {fileID: 2100000, guid: ff0be7b3d8cb38141942f10ebe7e172d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
