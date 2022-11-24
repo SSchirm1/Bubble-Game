@@ -97,7 +97,12 @@ public class PauseMenu : MonoBehaviour
 
     public void RespawnButton()
     {
-        Resume();
+        pauseMenuUI.SetActive(false);
+        respawnMenuUI.SetActive(false);
+        controlMenuUI.SetActive(false);
+        gameUI.SetActive(true);
+        Time.timeScale = 1.5f;  
+        GamePaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // 1 is game scene
     }
 
