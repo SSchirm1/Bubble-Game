@@ -8672,12 +8672,12 @@ PrefabInstance:
     - target: {fileID: 6622379643870524295, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000033016384
+      value: 0.000000059169828
       objectReference: {fileID: 0}
     - target: {fileID: 6622379643870524295, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000028235007
+      value: -0.000000050600956
       objectReference: {fileID: 0}
     - target: {fileID: 6622379644197201694, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
@@ -19446,10 +19446,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6956288534758904574}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6159892934976739648, guid: 2255f8062dc1b4a33ac72c0f90e56c40, type: 3}
 --- !u!114 &6956288534758904576
