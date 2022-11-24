@@ -10,13 +10,14 @@ public class ScoreScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public static int scoreValue = 0;
+    public static int scoreValue;
     public static bool allCollected = false;
     TextMeshProUGUI score;
     float count;
     public GameObject[] getCount;
     void Start()
     {
+        ScoreScript.scoreValue = 0;
         score = GetComponent<TextMeshProUGUI>();
         getCount = GameObject.FindGameObjectsWithTag("collectible");
         count = getCount.Length;
