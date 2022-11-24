@@ -97,8 +97,8 @@ public class PauseMenu : MonoBehaviour
 
     public void RespawnButton()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // 1 is game scene
         Resume();
-        SceneManager.LoadScene(1);  // 1 is game scene
     }
 
 
