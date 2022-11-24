@@ -6,20 +6,12 @@ using UnityEngine.SceneManagement;
 public class PortalScript : MonoBehaviour
 {
 
-    void Start()
+    private void OnTriggerEnter(Collider collided) 
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        OnTriggerEnter(Collider collided) 
+        if (ScoreScript.allCollected) 
         {
-            if (ScoreScript.allCollected) 
-            {
-                SceneManager.LoadScene(2); // win scene
-            }
+            SceneManager.LoadScene(2); // win scene
         }
     }
+    
 }
