@@ -13,6 +13,13 @@ public class PauseMenu : MonoBehaviour
   public GameObject controlMenuUI;
   public GameObject gameUI;
 
+    private GameObject playerStats;
+    private float lives;
+
+    void Start() {
+        playerStats = GameObject.Find("PlayerStats");
+    }
+
 
     void Update()
     {
@@ -29,12 +36,13 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        /* code for respawn menu, needs life count to work
+        lives = playerStats.GetComponent<PlayerStats>().Health;
+
         if (lives <= 0)
         {
             Respawn();
         }
-        */
+      
 
     }
 
