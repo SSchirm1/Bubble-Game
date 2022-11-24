@@ -11,6 +11,7 @@ public class ScoreScript : MonoBehaviour
     // Start is called before the first frame update
 
     public static int scoreValue = 0;
+    public static bool allCollected = false;
     TextMeshProUGUI score;
     float count;
     public GameObject[] getCount;
@@ -25,5 +26,9 @@ public class ScoreScript : MonoBehaviour
     void Update()
     {
         score.SetText("Objekter samlet: {0}/{1}", scoreValue, count);
+        if (scoreValue == count) 
+        {
+            allCollected = true;
+        }
     }
 }
