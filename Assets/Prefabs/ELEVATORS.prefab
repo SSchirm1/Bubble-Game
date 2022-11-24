@@ -111,7 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -226,7 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -341,7 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -456,7 +459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -571,7 +575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -686,7 +691,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -801,7 +807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -916,7 +923,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -1031,7 +1039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -1193,7 +1202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -1308,7 +1318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -1423,7 +1434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -1538,7 +1550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -1653,7 +1666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -1768,7 +1782,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
@@ -1883,7 +1898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d279b659338deb4da54cde34ee7ec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  delay: 0
+  speed: 5
   movingUp: 1
   height: 63
   startPos: {x: 0, y: 0, z: 0}
