@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/BubbleUpScene1.unity
     guid: 71674a1cc63444b909f01aaa097efc15
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AndreasScene.unity
     guid: 22cf134648e562949a1ba596bb1891b0
   m_configObjects: {}

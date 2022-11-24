@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04365543, g: 0.044817843, b: 0.059549738, a: 1}
+  m_IndirectSpecularColor: {r: 0.04365709, g: 0.044818856, b: 0.05955075, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7990,12 +7990,12 @@ PrefabInstance:
     - target: {fileID: 6622379643870524295, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000043088992
+      value: 0.000000033016384
       objectReference: {fileID: 0}
     - target: {fileID: 6622379643870524295, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000036848917
+      value: -0.000000028235007
       objectReference: {fileID: 0}
     - target: {fileID: 6622379644197201694, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
@@ -8015,17 +8015,17 @@ PrefabInstance:
     - target: {fileID: 6622379644197201694, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.93472165
+      value: 0.93472177
       objectReference: {fileID: 0}
     - target: {fileID: 6622379644197201694, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000069150424
+      value: 0.00000005878723
       objectReference: {fileID: 0}
     - target: {fileID: 6622379644197201694, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000006362758
+      value: -0.00000005409207
       objectReference: {fileID: 0}
     - target: {fileID: 6622379644197201695, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
@@ -8045,17 +8045,17 @@ PrefabInstance:
     - target: {fileID: 6622379645102061393, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.27
+      value: 4.6709995
       objectReference: {fileID: 0}
     - target: {fileID: 6622379645102061393, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.9
+      value: 12.98
       objectReference: {fileID: 0}
     - target: {fileID: 6622379645102061393, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 57.3
+      value: 48.9
       objectReference: {fileID: 0}
     - target: {fileID: 6622379645102061393, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
@@ -8090,7 +8090,7 @@ PrefabInstance:
     - target: {fileID: 6622379645139357486, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.6709995
+      value: -2.671
       objectReference: {fileID: 0}
     - target: {fileID: 6622379645139357486, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
@@ -8105,17 +8105,17 @@ PrefabInstance:
     - target: {fileID: 6622379645139357486, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.17121497
+      value: 0.17121495
       objectReference: {fileID: 0}
     - target: {fileID: 6622379645139357486, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1.1288043e-22
       objectReference: {fileID: 0}
     - target: {fileID: 6622379645139357486, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -1.961648e-23
       objectReference: {fileID: 0}
     - target: {fileID: 6622379645139357487, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
@@ -8175,7 +8175,7 @@ PrefabInstance:
     - target: {fileID: 6622379645355453531, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000047683716
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6622379645355453531, guid: 90c8d0a46d764ef43a210e230882d41b,
         type: 3}
@@ -14083,7 +14083,7 @@ GameObject:
   - component: {fileID: 8988832313581042991}
   m_Layer: 9
   m_Name: "utend\xF8rs_bakkeplan.060"
-  m_TagString: Untagged
+  m_TagString: Soap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
