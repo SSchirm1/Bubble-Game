@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
+
+
 public class ScoreScript : MonoBehaviour
 
 
@@ -9,12 +11,12 @@ public class ScoreScript : MonoBehaviour
     // Start is called before the first frame update
 
     public static int scoreValue = 0;
-    Text score;
+    TextMeshProUGUI score;
     float count;
     public GameObject[] getCount;
     void Start()
     {
-        score = GetComponent<Text>();
+        score = GetComponent<TextMeshProUGUI>();
         getCount = GameObject.FindGameObjectsWithTag("collectible");
         count = getCount.Length;
     }
@@ -22,6 +24,6 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Objekter samlet: " + scoreValue + "/" + count;
+        score.SetText("Objekter samlet: {0}/{1}", scoreValue, count);
     }
 }

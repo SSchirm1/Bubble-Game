@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
 
   public GameObject pauseMenuUI;
   public GameObject respawnMenuUI;
+  public GameObject gameUI;
 
 
     void Update()
@@ -39,6 +40,8 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        respawnMenuUI.SetActive(false);
+        gameUI.SetActive(true);
         Time.timeScale = 1.5f;  
         GamePaused = false;
     }
@@ -48,6 +51,7 @@ public class PauseMenu : MonoBehaviour
         ActivateCursor();
 
         pauseMenuUI.SetActive(true);
+        gameUI.SetActive(false);
         Time.timeScale = 0f;
         GamePaused = true;
     }
@@ -56,6 +60,7 @@ public class PauseMenu : MonoBehaviour
     {
         ActivateCursor();
         respawnMenuUI.SetActive(true);
+        gameUI.SetActive(false);
         Time.timeScale = 0f;
         GamePaused = true;
 

@@ -68,6 +68,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
     private bool floatUpCharge;
     private bool floatDownCharge;
 
+    public static bool isSoaped = false;
 
     public AudioSource jumpAudio;
 
@@ -97,6 +98,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
         if (collision.gameObject.tag == "Soap" && state != State.soap) {
             state = State.soap;
+            isSoaped = true;
             
 
         }
@@ -169,6 +171,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
         // turn to bubble
         if(Input.GetKey(KeyCode.E) && state == State.soap) {
             state = State.bubble;
+            isSoaped = false;
             becomeBubble();
         }
     }
