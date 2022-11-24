@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6223617057227795078}
   - component: {fileID: 6223617057227795079}
   - component: {fileID: 6223617057227795076}
-  - component: {fileID: 114621544505088169}
+  - component: {fileID: 3078326777880002803}
   m_Layer: 0
   m_Name: smallbounce
   m_TagString: Untagged
@@ -99,19 +99,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114621544505088169
-MonoBehaviour:
+--- !u!65 &3078326777880002803
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6223617057227795077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f34d455370ab2d47ac7f20ce17bf512, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 20
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6223617057752392046
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 6223617057752392040}
   - component: {fileID: 6223617057752392041}
   - component: {fileID: 1495485053976233927}
+  - component: {fileID: 4818663167441533460}
   m_Layer: 0
   m_Name: Bounce
   m_TagString: Untagged
@@ -222,4 +223,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f34d455370ab2d47ac7f20ce17bf512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 10
+  force: 1000
+--- !u!65 &4818663167441533460
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6223617057752392046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0.00000011920929, y: 0, z: 0.00000023841858}
