@@ -82,9 +82,11 @@ public class ThirdPersonMovementForces : MonoBehaviour
 
         jumpAudio = GetComponent<AudioSource>();
        
-
+        
         state = State.ball;
         becomeBall();
+
+        Time.timeScale = 1.5f;
     }
 
     private void OnCollisionEnter(Collision collision)
