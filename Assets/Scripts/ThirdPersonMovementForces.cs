@@ -98,11 +98,18 @@ public class ThirdPersonMovementForces : MonoBehaviour
             becomeBall();    
         }
 
+         if (collision.gameObject.tag == "Soap" && state != State.soap) {
+            state = State.soap;
+            isSoaped = true;
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
         if (collision.gameObject.tag == "Soap" && state != State.soap) {
             state = State.soap;
             isSoaped = true;
-            
-
         }
     }
 
