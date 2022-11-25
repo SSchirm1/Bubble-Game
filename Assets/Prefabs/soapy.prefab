@@ -83,6 +83,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: soapwater (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1488052821364985677, guid: 08c792520b3e6754eb93ca3159681bb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747482328693567683, guid: 08c792520b3e6754eb93ca3159681bb2,
+        type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1747482328693567683, guid: 08c792520b3e6754eb93ca3159681bb2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
