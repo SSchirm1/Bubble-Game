@@ -11,7 +11,7 @@ public class PortalScript : MonoBehaviour
     {
         if (ScoreScript.allCollected) 
         {
-            SceneManager.LoadScene(2); // win scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // win scene
         }
     }
 

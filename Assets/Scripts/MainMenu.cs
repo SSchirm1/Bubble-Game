@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
+    public static bool firstTime = true;
+    
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log(firstTime);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + (firstTime ? 1 : 2));
     }
     
+    public void viewTutorial() {
+      firstTime = false;
+    }
 }

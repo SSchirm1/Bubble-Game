@@ -71,7 +71,7 @@ public class ThirdPersonMovementForces : MonoBehaviour
     public static bool isSoaped = false;
 
     public AudioSource jumpAudio;
-
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();

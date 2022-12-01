@@ -9,5 +9,11 @@ public class VictoryScreen : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void TutorialButton()
+    {
+      MainMenu.firstTime = false;
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
     
 }
